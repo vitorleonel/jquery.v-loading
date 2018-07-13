@@ -1,0 +1,46 @@
+.v-loading,
+.v-loading > .v-loading__background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.v-loading {
+    display: none;
+    z-index: 999;
+}
+
+.v-loading.is-active {
+    display: block;
+}
+
+.v-loading > .v-loading__background {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.v-loading > .v-loading__body {
+    width: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.5rem;
+    margin-left: -2.5rem;
+}
+
+.v-loading > .v-loading__body > svg {
+    width: 5rem;
+    animation: v-loading infinite linear 1s;
+}
+
+@keyframes v-loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
